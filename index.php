@@ -21,10 +21,11 @@
                                    content="einfacher Textfluss">     -->
          
         <!-- $tags = get_meta_tags("metaTags.html"); -->
-		<tr><td>metaTags.html</td><td><?php echo  get_meta_tags("metaTags.html")['keywords'] ?></td>
-		<td><?php echo  get_meta_tags("metaTags.html")['DESCRIPTION'] ?></td>
-		
-		</tr>
+<tr>
+	<td>metaTags.html</td>
+	<td><?php echo get_meta_tags("metaTags.html")['keywords'];   ?></td>
+	<td><?php echo get_meta_tags("metaTags.html")['DESCRIPTION'];?></td>
+</tr>
 	</table>
 		
 	</body>
