@@ -41,7 +41,8 @@
 			<tr>
 				<td>metaTags.html</td>
 				<td>
-					<?php echo get_meta_tags("metaTags.html")['keywords'];   ?>
+					<?php //echo get_meta_tags("metaTags.html")['keywords'];   
+					?>
 				</td>
 				<td>
 					<?php echo get_meta_tags("metaTags.html")['Description'];?>
