@@ -10,10 +10,10 @@
 	
 	<h5>Die Dateien im Einzelnen</h5>
 	<table>
-		<tr><th>Bezeichnung</th><th>Begriffe</th></tr>
+		<tr><th>Bezeichnung</th><th>Begriffe</th><th>Thema</th></tr>
 		
-		<tr><td>0001.html</td><td>einfacher Textfluss</td></tr>
-		<tr><td>0002.html</td><td>Umbruch, br, </td></tr>
+		<tr><td>0001.html</td><td>einfacher Textfluss</td><td></td></tr>
+		<tr><td>0002.html</td><td>Umbruch, br, </td><td></td>/tr>
 		
 		
 		<!-- todo  PHP script scandir get_meta_tags 
@@ -21,7 +21,10 @@
                                    content="einfacher Textfluss">     -->
          
         <!-- $tags = get_meta_tags("metaTags.html"); -->
-		<tr><td>metaTags.html</td><td><?php echo  get_meta_tags("metaTags.html")['keywords'] ?></td></tr>
+		<tr><td>metaTags.html</td><td><?php echo  get_meta_tags("metaTags.html")['keywords'] ?></td>
+		<td><?php echo  get_meta_tags("metaTags.html")['DESCRIPTION'] ?></td>
+		
+		</tr>
 	</table>
 		
 	</body>
