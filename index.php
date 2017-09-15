@@ -44,7 +44,7 @@
 					<?php echo get_meta_tags("metaTags.html")['keywords'];   ?>
 				</td>
 				<td>
-					<?php echo get_meta_tags("metaTags.html")["DESCRIPTION"];?>
+					<?php echo get_meta_tags("metaTags.html")['Description'];?>
 				</td>
 			</tr>
 	</table>
