@@ -45,7 +45,8 @@
 					?>
 				</td>
 				<td>
-					<?php echo get_meta_tags("metaTags.html")['Description'];?>
+					<?php $tags = get_meta_tags("metaTags.html");<br>
+						echo $tags['description'];?>
 				</td>
 			</tr>
 	</table>
