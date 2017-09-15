@@ -1,5 +1,8 @@
 <html>
-
+<?php 
+error_reporting(E_ALL);
+	
+?>
 <head>
 	<meta content="utf-8">
 	<title>Beispieldateien zu HTML</title>
@@ -45,8 +48,9 @@
 					?>
 				</td>
 				<td>
-					<?php $tags = get_meta_tags("metaTags.html");<br>
-						echo $tags['description'];?>
+					<?php $tags = get_meta_tags("metaTags.html");
+						echo $tags['description'];
+					?>
 				</td>
 			</tr>
 	</table>
