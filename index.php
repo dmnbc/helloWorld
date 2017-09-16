@@ -1,8 +1,21 @@
 <html>
 <?php 
-error_reporting(E_ALL);
+error_reporting(E_ALL & ~E_NOTICE);
+function list_files()
+{
+  $dir = opendir("./");
+          while($file = readdir($dir))
+            {
+              if(is_file($file)	&& $file != "." && $file != "..")
+			  {
+                $array[] = $file;
+				 }
+			}
+	return $array;
+}
 	
-?>
+	
+	?>
 <head>
 	<meta content="utf-8">
 	<title>Beispieldateien zu HTML</title>
@@ -23,36 +36,17 @@ error_reporting(E_ALL);
 			<th>Begriffe</th>
 			<th>Thema</th>
 		</tr>
+<?php
+		$file_array = list_files();
+	foreach($file_array as $filename)
+	{
+		$tags = get_meta_tags($filename);
+		echo "<tr><td><a href=$filename>$filename</a></td><td>".$tags['keywords']."</td><td>".$tags['description']."</td></tr>";
+	}
 
-		<tr>
-			<td>0001.html</td>
-			<td>einfacher Textfluss</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>0002.html</td>
-			<td>Umbruch, br, </td>
-			<td></td>
-		</tr>
+?>
 
-
-			<!-- todo  PHP script scandir get_meta_tags 
-		        Link setzen      <meta name="keywords" <br>
-                                   content="einfacher Textfluss">     -->
-
-			<!-- $tags = get_meta_tags("metaTags.html"); -->
-			<tr>
-				<td>metaTags.html</td>
-				<td>
-					<?php echo get_meta_tags("metaTags.html")['keywords'];   
-					?>
-				</td>
-				<td>
-					<?php $tags = get_meta_tags("metaTags.html");
-						echo $tags['description'];
-					?>
-				</td>
-			</tr>
+			
 	</table>
 
 </body>
