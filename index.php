@@ -6,7 +6,7 @@ function list_files()
   $dir = opendir("./");
           while($file = readdir($dir))
             {
-              if(is_file($file)	&& $file != "." && $file != "..")
+              if(is_file($file)	&& $file != "." && $file != ".." && !getimagesize($file))
 			  {
                 $array[] = $file;
 				 }
