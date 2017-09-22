@@ -6,12 +6,16 @@
 <meta name="Keywords" content="selectors">
 <meta name="Description" content="Beispiele zu Selektoren">
 <style>
-	nav{
+	:matches(:link){
+		font-size: 36px;
+	}
+	nav{ 
 		/* border:solid 1px #aaa; */
 		border-radius: 10%;
 		display:inline-block;
 		position:relative;
 		background-color:transparent;
+		
 		z-index:20;
 		
 	}
@@ -38,9 +42,13 @@
 	}
 		nav ul ul li {
 			clear:both;
-			width:auto;
+			width:200px;
 			background-color:white;
-			padding:10px;
+			padding-left:75px;
+			padding-top:25px;
+			padding-bottom:25px;
+			border: 1px solid #eee;
+			border-radius:50%;
 		}
 	#Infobereich{
 		position: absolute;
@@ -48,13 +56,41 @@
 		left:10px;
 		z-index:5;
 	}
+	
+	#einfache{
+		border: 1px solid blue;
+	}
+	
+	.auf_Zeile_bleiben{
+		display:inline-block;		
+	}
+	
+	.auf_Zeile_bleiben::first-letter
+	{
+		font-style:italic;
+	}
+	
+	#kombinierte{
+		border: 1px solid green;
+	}
+	
+	#kombinierte tr:nth-child(even)
+	{
+		background-color: #aaa; /*  3 Ziffern beiden pro Farbanteil von 0 - 15 */
+		                        /*   rot 10, grün 10, blau 10 */
+	}
+	#kombinierte tr:nth-child(odd)
+	{
+		background-color: #808080; /* pro Farbe 255 Abstufungen */ 
+		                           /* rot 128, grün 128, blau 128 */ 
+	}
 </style>
 </head>
 
 <body>
 <nav> <!-- statt div mit id -->
 <ul>
-	<li><a href="simpleselectors.html">einfache Selektoren </a>&rArr;</li>
+	<li><a href="#einfache">einfache Selektoren </a>&rArr;</li>
 	<li><a href="pseudoselector.html">Pseudoselektoren </a>&dArr;
 	<ul>
 		<li><a href="hover.html">hover</a>&rArr;</li>
@@ -65,7 +101,45 @@
 	<li><a href="selektoren.html">Home</a>&rArr;</li>
 </ul>
 </nav>
-<p id="Infobereich">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+<p id="Infobereich">
+
+<ul id="einfache">
+	<li>Tags werden ohne kennzeichnung angesprochen</li>
+	<li>Ids  werden mit vornagestellter Raute gekennzeichnet</li>
+	<li>Klassen erhalten vorab einen Punkt</li>
+	</ul>
+<p> 
+
+Als Tags können alle in HTML5 bekannten Elemente ansprochen werden.<br>
+	Ids müssen einmalig sein, es wird zwischen <li class="auf_Zeile_bleiben">Groß-</li> und <li class="auf_Zeile_bleiben">Kleinschreibweise</li>  unterschieden.<br>Klassen können mehrfach zugeordnet werden.
+
+
+	</p>
+	<ul id="kombiniert">
+	<li> Tags hintereinander nur mit Leerzeichen getrennt</li>
+	<li> Tags hintereinander durch ein >  getrennt</li>
+	<li> Tags hintereinander durch ein ~  getrennt</li>
+	<li> Tags hintereinander durch ein +  getrennt</li>	
+	<li> Tags hintereinander durch ein ,  getrennt</li>	
+</ul>
+
+<p>
+	<table id="kombinierte">
+	<tr><th>Beispiel</th><th>Name</th><th>Erklärung</th></tr>
+		<tr><td>ul li</td><td> Nachfahrenselektoren</td><td>Lorem ipsum dolor sit amet,</td></tr>
+	<tr><td>ul > li</td><td> Kindselektoren</td><td>adipscing elitr, sed diam nonumy eirmod tempor</td></tr>
+	<tr><td>ul ~ li</td><td> Allgemeine Geschwisterselektoren</td><td>rgren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt </td></tr>
+	<tr><td>ul + li</td><td> Angrenzende Geschwisterselektoren</td><td>um dolor sit amet, </td></tr>
+	<tr><td>ul, li</td><td>  Aufzählung</td><td>Alle die aufgezählt werden</td></tr>
+	</table>
+	
+	
+
+	</p>
+
+
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
 
 Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
 
