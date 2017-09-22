@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<title>Unbenanntes Dokument</title>
+<meta charset="utf-8">
+<meta name="Keywords" content="selectors">
+<meta name="Description" content="Beispiele zu Selektoren">
+<style>
+	nav{
+		border:solid 1px #aaa;
+		border-radius: 10%;
+		display:inline-block;
+		
+	}
+	nav ul{
+		list-style-type: none;
+		background-color: #aaa;
+	}
+	
+	nav ul ul{ /* Folgeselector durch Leerzeichen */
+		display:none;
+	}
+	
+	nav ul li:hover ul{ /* Folgeselector durch Leerzeichen */
+		display:block;
+	}
+</style>
+</head>
+
+<body>
+<nav> <!-- statt div mit id -->
+<ul>
+	<li><a href="simpleselectors.html">einfache Selektoren </a>&rArr;</li>
+	<li><a href="pseudoselector.html">Pseudoselektoren </a>&dArr;
+	<ul>
+		<li>hover</li>
+		<li>nth-child</li>
+		<li>first</li>
+	</ul></li>
+	<li><a href="login.html">Login/Register</a>&rArr;</li>
+	<li><a href="selektoren.html">Home</a>&rArr;</li>
+</ul>
+</nav>
+Hier kommt dann ein wenig text hin......
+<ul><li>xx</li></ul>
+</body>
+</html>
