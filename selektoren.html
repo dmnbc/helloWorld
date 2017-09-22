@@ -7,14 +7,17 @@
 <meta name="Description" content="Beispiele zu Selektoren">
 <style>
 	nav{
-		border:solid 1px #aaa;
+		/* border:solid 1px #aaa; */
 		border-radius: 10%;
 		display:inline-block;
+		position:relative;
+		background-color:transparent;
+		z-index:20;
 		
 	}
 	nav ul{
 		list-style-type: none;
-		background-color: #aaa;
+		/*background-color: #aaa;*/
 	}
 	
 	nav ul ul{ /* Folgeselector durch Leerzeichen */
@@ -23,11 +26,28 @@
 	
 	nav ul li:hover ul{ /* Folgeselector durch Leerzeichen */
 		display:block;
+		
+	}
+	nav>ul >li>a{
+		padding:10px 15px;
+		background-color:white;
 	}
 	
 	nav li {
 	float: left;
-}
+	}
+		nav ul ul li {
+			clear:both;
+			width:auto;
+			background-color:white;
+			padding:10px;
+		}
+	#Infobereich{
+		position: absolute;
+		top:45px;
+		left:10px;
+		z-index:5;
+	}
 </style>
 </head>
 
@@ -37,15 +57,15 @@
 	<li><a href="simpleselectors.html">einfache Selektoren </a>&rArr;</li>
 	<li><a href="pseudoselector.html">Pseudoselektoren </a>&dArr;
 	<ul>
-		<li><a href="hover.html">hover</a></li>
-		<li><a href="nthChild.html">nth-child</a></li>
-		<li><a href="first.html">first</a></li>
+		<li><a href="hover.html">hover</a>&rArr;</li>
+		<li><a href="nthChild.html">nth-child</a>&rArr;</li>
+		<li><a href="first.html">first</a>&rArr;</li>
 	</ul></li>
 	<li><a href="login.html">Login/Register</a>&rArr;</li>
 	<li><a href="selektoren.html">Home</a>&rArr;</li>
 </ul>
 </nav>
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+<p id="Infobereich">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
 
 Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
 
@@ -61,7 +81,8 @@ Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+	</p>
 
 
 </body>
