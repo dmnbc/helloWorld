@@ -1,0 +1,67 @@
+/* CSS Document */
+
+header{
+	background-color:#C21A27;
+	padding:1%;
+	border-radius:5px;
+}
+
+#Kategorien, #linke
+{
+	width:75%;
+	margin-top:;
+	height:auto;
+	float:left;
+}
+
+
+#Kategorien td{
+	width: 25%;
+	/* border: 1px solid white; */
+	font-size:12px;
+	color:white;
+}
+
+
+
+#Logo{
+	margin-right:2%;
+	width:22%;
+	box-shadow: 5px 5px 4px 2px #eee
+}
+
+a:visited, a:link, a:active
+{
+    text-decoration: none;
+	color:white;
+}
+
+a:hover{
+	color:yellow;
+}
+
+#rechte{
+	
+}
+#linke{
+	
+}
+
+footer{
+	clear:both;
+	background-color:#C21A27;
+}
+
+.pizzadetails input{
+	color:red;
+}
+
+label{
+	border:1px solid brown;
+	display:inline-block;
+	width:120px;
+}
+
+#scharf label{
+	border:none;
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<title>Unbenanntes Dokument</title>
+<meta charset="utf-8">
+<meta name="Keywords" content="nth ">
+<meta name="Description" content="Beispiele zu nth-Child Selektoren">
+
+<style>
+	/*td:hover{
+		border:1px solid blue;
+	}*/
+	
+	tr:nth-child(1)
+	{
+		font-weight:900;
+	}
+	
+	tr td:nth-child(1)
+	{
+		font-weight:900;
+	}
+	
+		
+	tr>td:first-child:hover ~ td ,tr>td:first-child:hover {background:yellow;}
+	
+	td:hover::after
+	{
+		content:"X";
+		background-color:blue;
+	}
+
+</style>
+
+	</head>
+	<body>
+	<table>
+		<tr class="row"><td >1</td><td class="col">2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+		<tr class="row"><td >2</td><td class="col">X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+		<tr class="row"><td >3</td><td class="col">X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+		<tr class="row"><td>4</td><td class="col">X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+		<tr class="row"><td>5</td><td class="col">X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+		<tr class="row"><td>6</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+		<tr class="row"><td>7</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+		<tr class="row"><td>8</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+		<tr class="row"><td>9</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+		<tr class="row"><td>10</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+		<tr class="row"><td>11</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+		<tr class="row"><td>12</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+	</table>
+		
+		
+	</body>
+</html>

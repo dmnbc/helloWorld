@@ -1,0 +1,91 @@
+/* CSS Document */
+nav{ 
+		/* border:solid 1px #aaa; */
+		border-radius: 10%;
+		display:inline-block;
+		position:relative;
+		background-color:transparent;
+		
+		z-index:20;
+		
+	}
+	nav ul{
+		list-style-type: none;
+		/*background-color: #aaa;*/
+	}
+	
+	nav ul ul{ /* Folgeselector durch Leerzeichen */
+		display:none;
+	}
+	
+	nav ul li:hover ul{ /* Folgeselector durch Leerzeichen */
+		display:block;
+		
+	}
+	nav>ul >li>a{
+		padding:10px 15px;
+		background-color:white;
+	}
+	
+	nav li {
+	float: left;
+	}
+		nav ul ul li {
+			clear:both;
+			width:200px;
+			background-color:white;
+			padding-left:75px;
+			padding-top:25px;
+			padding-bottom:25px;
+			border: 1px solid #eee;
+			border-radius:50%;
+		}
+	#Infobereich{
+		position: absolute;
+		top:45px;
+		left:10px;
+		z-index:5;
+	}
+	
+	#einfache{
+		border: 1px solid blue;
+	}
+	
+	 .auf_Zeile_bleiben{
+		display:inline-block;		
+	}
+	
+	.auf_Zeile_bleiben::first-letter
+	{
+		font-style:italic;
+	}
+	
+	#kombinierte{
+		border: 1px solid green;
+	}
+	
+	#kombinierte tr:nth-child(even)
+	{
+		background-color: rgb(169,169,169); 
+	}
+	#kombinierte tr:nth-child(odd)
+	{
+		background-color: #808080; /* pro Farbe 255 Abstufungen */ 
+		                           /* rot 128, grün 128, blau 128 */ 
+	}
+	
+	#kombinierte tr:nth-child(even) td:nth-child(3)
+	{
+		background-color: #808000;
+	}
+	
+	#kombinierte tr:nth-child(odd) td:nth-child(3):hover
+	{
+		background-color: #008000;
+	}
+	
+	#kombinierte  td:hover
+	{
+		color: #ff0000;
+	}
+	

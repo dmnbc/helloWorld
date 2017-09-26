@@ -5,86 +5,26 @@
 <meta charset="utf-8">
 <meta name="Keywords" content="selectors">
 <meta name="Description" content="Beispiele zu Selektoren">
-<style>
-	:matches(:link){
-		font-size: 36px;
-	}
-	nav{ 
-		/* border:solid 1px #aaa; */
-		border-radius: 10%;
-		display:inline-block;
-		position:relative;
-		background-color:transparent;
-		
-		z-index:20;
-		
-	}
-	nav ul{
-		list-style-type: none;
-		/*background-color: #aaa;*/
-	}
+
+ <link href="design.css"  rel="stylesheet" > 
+ <style>
+	 
+	 .rechteck{
+		 border: 1px solid black;
+		 width: 80px;
+		 height:80px;
+		 float:left; 
+		 opacity: 1.0
+	 }
+	 
+	 .rechteck:hover{
+		 opacity:0.0;
+	 }
+	 
 	
-	nav ul ul{ /* Folgeselector durch Leerzeichen */
-		display:none;
-	}
+	</style>
 	
-	nav ul li:hover ul{ /* Folgeselector durch Leerzeichen */
-		display:block;
-		
-	}
-	nav>ul >li>a{
-		padding:10px 15px;
-		background-color:white;
-	}
-	
-	nav li {
-	float: left;
-	}
-		nav ul ul li {
-			clear:both;
-			width:200px;
-			background-color:white;
-			padding-left:75px;
-			padding-top:25px;
-			padding-bottom:25px;
-			border: 1px solid #eee;
-			border-radius:50%;
-		}
-	#Infobereich{
-		position: absolute;
-		top:45px;
-		left:10px;
-		z-index:5;
-	}
-	
-	#einfache{
-		border: 1px solid blue;
-	}
-	
-	.auf_Zeile_bleiben{
-		display:inline-block;		
-	}
-	
-	.auf_Zeile_bleiben::first-letter
-	{
-		font-style:italic;
-	}
-	
-	#kombinierte{
-		border: 1px solid green;
-	}
-	
-	#kombinierte tr:nth-child(even)
-	{
-		background-color: #aaa; /*  3 Ziffern beiden pro Farbanteil von 0 - 15 */
-		                        /*   rot 10, grün 10, blau 10 */
-	}
-	#kombinierte tr:nth-child(odd)
-	{
-		background-color: #808080; /* pro Farbe 255 Abstufungen */ 
-		                           /* rot 128, grün 128, blau 128 */ 
-	}
-</style>
+
 </head>
 
 <body>
@@ -104,17 +44,27 @@
 <p id="Infobereich">
 
 <ul id="einfache">
-	<li>Tags werden ohne kennzeichnung angesprochen</li>
+	<li>Tags werden ohne Kennzeichnung angesprochen</li>
 	<li>Ids  werden mit vornagestellter Raute gekennzeichnet</li>
 	<li>Klassen erhalten vorab einen Punkt</li>
 	</ul>
 <p> 
 
 Als Tags können alle in HTML5 bekannten Elemente ansprochen werden.<br>
-	Ids müssen einmalig sein, es wird zwischen <li class="auf_Zeile_bleiben">Groß-</li> und <li class="auf_Zeile_bleiben">Kleinschreibweise</li>  unterschieden.<br>Klassen können mehrfach zugeordnet werden.
-
-
-	</p>
+	Ids müssen einmalig sein, es wird zwischen <span class="auf_Zeile_bleiben">Groß-</span> und <span class="auf_Zeile_bleiben">Kleinschreibweise</span>  unterschieden.<br>Klassen können mehrfach zugeordnet werden.
+</p>
+<div id="beispiele">
+	<h4>Beispiel: </h4> 
+	<div class="rechteck" style="background-color:black"></div>
+	<div class="rechteck" style="background-color:red"></div>
+	<div class="rechteck" style="background-color:blue"></div>
+	<div class="rechteck" style="background-color:yellow"></div>
+	<div class="rechteck" style="background-color:deeppink"></div>
+	<div class="rechteck" style="background-color:green"></div>
+	
+	</div>
+	<br><br><br><br><br>
+	<h4>Kombinationen</h4>
 	<ul id="kombiniert">
 	<li> Tags hintereinander nur mit Leerzeichen getrennt</li>
 	<li> Tags hintereinander durch ein >  getrennt</li>
@@ -159,5 +109,6 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 	</p>
 
 
+&lt;br&gt;
 </body>
 </html>
