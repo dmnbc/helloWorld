@@ -3,8 +3,53 @@
 <head>
 <meta charset="utf-8">
 <title>Beispiel Layout Bausteinprüfung </title>
+<style>
+	header,nav,content,footer{
+		position:absolute;
+		border:2px solid red;
+	}
+	header{
+		top:0px;
+		left:0px;
+		width:100%;
+		height:15%;		
+	}
+	nav{
+		top:15.5%;
+		left:0px;
+		width:10%;
+		height:auto;	
+		
+	}
+	content{
+		top:15.5%;
+		left:11%;
+		width:100%;
+		height:auto;
+		
+	}
+	footer{
+		bottom:0px;
+		height:auto;
+		width:100%;
+		
+	}
+	</style>
 </head>
 
 <body>
+<header>
+	<h3>Banner und Logo hier: links oben im Browser verankert, volle Fensterbreite, Höhe 15%</h3>
+</header>
+<nav>
+	<h6>Liste mit Navigation<br>an der Seite<br>an der Seite<br>an der Seite<br>an der Seite</h6>mit 10% Breite
+</nav>
+<content>
+	<h4>Inhalt</h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget 
+</content>
+<footer>
+    Immer am Ende der sichtbaren Seite, volle Fensterbreite
+	<h6>Impressum Kontakt usw. </h6>
+</footer>
 </body>
 </html>
